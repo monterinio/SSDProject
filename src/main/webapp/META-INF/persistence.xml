@@ -10,7 +10,8 @@
 			<property name="javax.persistence.jdbc.password" value="imkingofpussy1" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/testbase" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL57Dialect" />
-			<property name="hibernate.hbm2ddl.auto" value="create-drop" />
+			<property name="hibernate.hbm2ddl.auto" value="update"/>
+			<!-- <property name="hibernate.hbm2ddl.auto" value="create" />  -->
 		</properties>
 	</persistence-unit>
 </persistence>

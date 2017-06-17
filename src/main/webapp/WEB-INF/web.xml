@@ -1,7 +1,71 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+	<display-name>SSD</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
 
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Panel comittee membera</web-resource-name>
+			<url-pattern>/committee_member.jsp</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+
+		<auth-constraint>
+			<role-name>comittee_member</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Panel reviewera</web-resource-name>
+			<url-pattern>/reviewer.jsp</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+
+		<auth-constraint>
+			<role-name>reviewer</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Panel scientific workera</web-resource-name>
+			<url-pattern>/scientific_worker.jsp</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+
+		<auth-constraint>
+			<role-name>scientific_worker</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Login Service</web-resource-name>
+			<url-pattern>/LoginService</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+
+		<auth-constraint>
+			<role-name>comittee_member</role-name>
+			<role-name>reviewer</role-name>
+			<role-name>scientific_worker</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+<login-config>
+	<auth-method>FORM</auth-method>
+	<form-login-config>
+		<form-login-page>/login.jsp</form-login-page>
+		<form-error-page>/error.jsp</form-error-page>
+	</form-login-config>
+</login-config>
 </web-app>
