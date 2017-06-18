@@ -15,6 +15,9 @@ public class ReportDetailModel {
 	@Column(name = "file_name")
 	private String fileName;
 	
+	@Column(name = "file")
+	private byte[] file;
+	
 	public String getFileName() {
 		return fileName;
 	}
@@ -26,5 +29,11 @@ public class ReportDetailModel {
 	}
 	public void setHashValue(long hashValue) {
 		this.hashValue = hashValue;
+	}
+	public byte[] getFile() {
+		return file;
+	}
+	public void setFile(byte[] file) {
+		this.file = file;
 	}
 }

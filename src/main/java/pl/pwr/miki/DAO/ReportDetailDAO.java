@@ -2,12 +2,13 @@ package pl.pwr.miki.DAO;
 
 import java.io.IOException;
 import java.nio.file.Paths;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
+
+import org.apache.commons.io.IOUtils;
 
 import pl.pwr.miki.model.ReportDetailModel;
 import pl.pwr.miki.model.ReportModel;
@@ -46,6 +47,7 @@ public class ReportDetailDAO {
 	private void extractDataFromRequest(HttpServletRequest request, ReportModel reportModel,
 			ReportDetailModel reportDetailModel) throws IOException, ServletException {
 		reportDetailModel.setFileName(Paths.get(request.getPart("report").getSubmittedFileName()).getFileName().toString());
+		reportDetailModel.setFile(IOUtils.toByteArray(request.getPart("report").getInputStream()));
 		reportModel.setFileName(Paths.get(request.getPart("report").getSubmittedFileName()).getFileName().toString());
 		reportModel.setFirstName(request.getParameter("firstName"));
 		reportModel.setLastName(request.getParameter("lastName"));
