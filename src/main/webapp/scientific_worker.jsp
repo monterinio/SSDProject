@@ -8,6 +8,9 @@
 </head>
 <body>
     <h1>Witaj w panelu scientific workera</h1>
+    <a href="http://localhost:8080/SSD/submitPaper.jsp">Submit paper</a>
+    <a href="http://localhost:8080/SSD/error.jsp">Check status</a>
+    <a href="http://localhost:8080/SSD/error.jsp">Check result</a>
     <a href="http://localhost:8080/SSD/LogoutService">Wyloguj</a>
 </body>
 </html>

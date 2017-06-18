@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Panel administracyjny</title>
+<title>Insert title here</title>
 </head>
 <body>
-    <h1>Witaj w panelu administracyjnym</h1>
+	<p>Duplicate found in the DB</p>
+	<button type="button" name="back" onclick="history.back()">back</button>
 </body>
 </html>
