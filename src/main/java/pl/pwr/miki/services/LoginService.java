@@ -22,7 +22,7 @@ public class LoginService extends HttpServlet {
 		}
 		
 		if(request.isUserInRole("reviewer")) {
-			response.sendRedirect("/SSD/reviewer.jsp");
+			response.sendRedirect("/SSD/GetPapersService");
 		}
 		
 		if(request.isUserInRole("comittee_member")) {
