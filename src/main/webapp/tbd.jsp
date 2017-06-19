@@ -7,14 +7,14 @@
          name="viewport" content="initial-scale=1, maximum-scale=1">
       <link rel="stylesheet"
          href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-      <title>Login page</title>
+      <title>To be done</title>
    </head>
    <body style="background-color: #f7f7f7">
       <section>
          <div class="jumbotron" style="background-color: #46B5DA;">
             <div class="container">
                <h1 style="color: white; text-align: center;">
-                  Log in
+                  This site is still under construction.
                </h1>
             </div>
          </div>
@@ -22,24 +22,7 @@
       <section class="container">
          <div class="row">
             <div class="col-md-4 col-md-offset-4">
-               <div class="panel panel-default">
-                  <div class="panel-body">
-                     <form action="j_security_check" method="post">
-                        <fieldset>
-                           <div class="form-group">
-                              <input class="form-control" placeholder="user" 
-                                 name='j_username' type="text">
-                           </div>
-                           <div class="form-group">
-                              <input class="form-control" placeholder="password"
-                                 name='j_password' type="password" value="">
-                           </div>
-                           <input class="btn btn-primary btn-block" type="submit"
-                              value="Login">
-                        </fieldset>
-                     </form>
-                  </div>
-               </div>
+               <button type="button" class="btn btn-primary btn-block" name="back" onclick="history.back()">Back</button>
             </div>
          </div>
       </section>
