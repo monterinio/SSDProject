@@ -72,4 +72,8 @@ public class SubmitPaperService extends HttpServlet {
 		checksumEngine.update(bytes, 0, bytes.length);
 		return checksumEngine.getValue();
 	}
+	
+	public long getCheckSum(){
+		return checksum;
+	}
 }
